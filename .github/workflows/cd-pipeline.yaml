@@ -40,11 +40,11 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          creds: ${{ secrets.AZURE_CREDENTIAL }}
+          creds: ${{ secrets.AZURE_CREDENTIAL }}v
 
       - name: Login to Azure Container Registry
         run: |
-          az acr login --name ${{ secrets.REGISTERY_USER_NAME }}
+          az acr login --name ${{ secrets.REGISTRY_USERNAME}}
 
       - name: Build Docker image
         run: |
