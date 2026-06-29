@@ -44,7 +44,7 @@ jobs:
 
       - name: Login to Azure Container Registry
         run: |
-           az acr login --name ${{ secrets.ACR_NAME }}
+           az acr login --name nodeappreg
       - name: Build Docker image
         run: |
           docker build -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/${{ env.IMAGE_NAME }}:${{ env.IMAGE_TAG }} .
